@@ -1,0 +1,66 @@
+---
+name: MetaStore
+version: 0.20
+author:
+  - Zahatski Aliaksandr zag@cpan.org
+abstract: Set of classes for multiuser web applications.
+license: perl
+resources:
+  license: http://dev.perl.org/licenses/
+requires:
+  Archive::Zip: 1.16
+  Data::UUID: 0.11
+  HTML::WebDAO: 0.04
+  IO::Zlib: 1.04
+  MIME::Base64: 3.07
+  Objects::Collection: 0.02
+  Template: 2.14
+  XML::Writer: 0.531
+provides:
+  MetaStore:
+    file: lib/MetaStore.pm
+    version: 0.20
+  MetaStore::Auth:
+    file: lib/MetaStore/Auth.pm
+    version: 0.01
+  MetaStore::Auth::User:
+    file: lib/MetaStore/Auth/User.pm
+    version: 0.01
+  MetaStore::Auth::UserGuest:
+    file: lib/MetaStore/Auth/UserGuest.pm
+  MetaStore::Base:
+    file: lib/MetaStore/Base.pm
+    version: 0.01
+  MetaStore::Cmetalinks:
+    file: lib/MetaStore/Cmetalinks.pm
+  MetaStore::Cmetatags:
+    file: lib/MetaStore/Cmetatags.pm
+  MetaStore::Config:
+    file: lib/MetaStore/Config.pm
+  MetaStore::DAOItem:
+    file: lib/MetaStore/DAOItem.pm
+    version: 0.01
+  MetaStore::IsAuthed:
+    file: lib/MetaStore/IsAuthed.pm
+  MetaStore::Item:
+    file: lib/MetaStore/Item.pm
+    version: 0.01
+  MetaStore::Kern:
+    file: lib/MetaStore/Kern.pm
+  MetaStore::Mem:
+    file: lib/MetaStore/Mem.pm
+    version: 0.01
+  MetaStore::MemnotUnique:
+    file: lib/MetaStore/MemnotUnique.pm
+    version: 0.01
+  MetaStore::StoreDir:
+    file: lib/MetaStore/StoreDir.pm
+  MetaStore::Users:
+    file: lib/MetaStore/Users.pm
+    version: 0.01
+  MetaStore::XMLStream:
+    file: lib/MetaStore/XMLStream.pm
+generated_by: Module::Build version 0.2805
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
