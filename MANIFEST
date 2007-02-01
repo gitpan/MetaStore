@@ -2,11 +2,13 @@ Build.PL
 Changes
 lib/MetaStore.pm
 lib/MetaStore/Auth.pm
+lib/MetaStore/Auth/Group.pm
 lib/MetaStore/Auth/User.pm
 lib/MetaStore/Auth/UserGuest.pm
 lib/MetaStore/Base.pm
 lib/MetaStore/Cmetalinks.pm
 lib/MetaStore/Cmetatags.pm
+lib/MetaStore/Component.pm
 lib/MetaStore/Config.pm
 lib/MetaStore/DAOItem.pm
 lib/MetaStore/IsAuthed.pm
