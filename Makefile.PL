@@ -12,7 +12,7 @@ WriteMakefile
                            'MIME::Base64' => '3.07',
                            'Objects::Collection' => '0.02',
                            'Template' => '2.14',
-                           'XML::Writer' => '0.531'
+                           'XML::Flow' => '0.82'
                          },
           'INSTALLDIRS' => 'site',
           'EXE_FILES' => [],

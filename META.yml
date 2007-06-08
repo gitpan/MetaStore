@@ -1,6 +1,6 @@
 ---
 name: MetaStore
-version: 0.22
+version: 0.24
 author:
   - Zahatski Aliaksandr zag@cpan.org
 abstract: Set of classes for multiuser web applications.
@@ -15,11 +15,11 @@ requires:
   MIME::Base64: 3.07
   Objects::Collection: 0.02
   Template: 2.14
-  XML::Writer: 0.531
+  XML::Flow: 0.82
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.22
+    version: 0.24
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -53,6 +53,9 @@ provides:
     version: 0.01
   MetaStore::Kern:
     file: lib/MetaStore/Kern.pm
+  MetaStore::Links:
+    file: lib/MetaStore/Links.pm
+    version: 0.01
   MetaStore::Mem:
     file: lib/MetaStore/Mem.pm
     version: 0.01
@@ -66,7 +69,7 @@ provides:
     version: 0.01
   MetaStore::XMLStream:
     file: lib/MetaStore/XMLStream.pm
-generated_by: Module::Build version 0.2805
+generated_by: Module::Build version 0.2808
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2

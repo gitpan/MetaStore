@@ -14,6 +14,7 @@ lib/MetaStore/DAOItem.pm
 lib/MetaStore/IsAuthed.pm
 lib/MetaStore/Item.pm
 lib/MetaStore/Kern.pm
+lib/MetaStore/Links.pm
 lib/MetaStore/Mem.pm
 lib/MetaStore/MemnotUnique.pm
 lib/MetaStore/StoreDir.pm
@@ -26,5 +27,6 @@ script/contrib/adddir.sh
 script/metastore.pl
 script/metastore.sql
 script/metastore_rpc.pl
-t/MetaStore.t
+t/01_MetaStore.t
+t/02_Links.t
 META.yml
