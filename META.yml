@@ -1,6 +1,6 @@
 ---
 name: MetaStore
-version: 0.24
+version: 0.26
 author:
   - Zahatski Aliaksandr zag@cpan.org
 abstract: Set of classes for multiuser web applications.
@@ -10,7 +10,7 @@ resources:
 requires:
   Archive::Zip: 1.16
   Data::UUID: 0.11
-  HTML::WebDAO: 0.04
+  HTML::WebDAO: 0.80
   IO::Zlib: 1.04
   MIME::Base64: 3.07
   Objects::Collection: 0.02
@@ -19,7 +19,7 @@ requires:
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.24
+    version: 0.26
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -62,6 +62,8 @@ provides:
   MetaStore::MemnotUnique:
     file: lib/MetaStore/MemnotUnique.pm
     version: 0.01
+  MetaStore::Response:
+    file: lib/MetaStore/Response.pm
   MetaStore::StoreDir:
     file: lib/MetaStore/StoreDir.pm
   MetaStore::Users:

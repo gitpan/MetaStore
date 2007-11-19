@@ -1,5 +1,7 @@
 package MetaStore::Kern;
 
+#$Id: Kern.pm 226 2007-11-19 19:13:47Z zag $
+
 =head1 NAME
 
 MetaStore::Kern - Class of kernel object.
@@ -19,6 +21,7 @@ Class of kernel object.
 
 use HTML::WebDAO::Engine;
 use MetaStore::Config;
+use MetaStore::Response;
 use Data::Dumper;
 use Carp;
 use strict;
@@ -44,6 +47,16 @@ sub config {
     return $self->_conf;
 }
 
+sub response {
+    my $self = shift;
+    my $sess = $self->_session;
+    my $resp = new MetaStore::Response::
+      session => $sess,
+      cv      => $sess->Cgi_obj;
+    $resp->set_header( -type => 'text/html; charset=utf-8' );
+    return $resp;
+}
+
 sub auth {
     my $self = shift;
     _log1 $self "method auth not bared !";
@@ -64,26 +77,27 @@ sub _createObj {
 
 sub parse_template {
     my $self = shift;
-    my ( $template, $predefined ,$template_config) = @_;
+    my ( $template, $predefined, $template_config ) = @_;
     $predefined->{self}   = $self unless exists $predefined->{self};
     $predefined->{system} = $self unless exists $predefined->{system};
     $template_config ||= {};
-#    my $template_obj = $self->__template_obj__ || new Template
+
+    #    my $template_obj = $self->__template_obj__ || new Template
     my $template_obj = new Template
       INTERPOLATE => 1,
       EVAL_PERL   => 0,
       ABSOLUTE    => 1,
       RELATIVE    => 1,
       %{$template_config},
-      VARIABLES   => $predefined,
+      VARIABLES => $predefined,
       or do { $self->_log1( "TTK Error:", [$Template::ERROR] ); return };
     $self->__template_obj__($template_obj);
-    $template_obj->context->stash->update({});
+    $template_obj->context->stash->update( {} );
     $template_obj->context->reset;
     my $res;
     $template_obj->process( $template, $predefined, \$res ) or do {
         my $error = $template_obj->error();
-        $self->_log1( "TTK Error:" . $error . "; file: $template");
+        $self->_log1( "TTK Error:" . $error . "; file: $template" );
         return;
     };
     return $res;
@@ -93,6 +107,11 @@ sub commit {
     my $self = shift;
 }
 
+sub _destroy {
+    my $self = shift;
+    $self->_conf(undef);
+    $self->SUPER::_destroy(@_);
+}
 1;
 __END__
 
@@ -106,7 +125,7 @@ Zahatski Aliaksandr, <zag@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005-2006 by Zahatski Aliaksandr
+Copyright (C) 2005-2007 by Zahatski Aliaksandr
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,

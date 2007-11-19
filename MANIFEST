@@ -17,6 +17,7 @@ lib/MetaStore/Kern.pm
 lib/MetaStore/Links.pm
 lib/MetaStore/Mem.pm
 lib/MetaStore/MemnotUnique.pm
+lib/MetaStore/Response.pm
 lib/MetaStore/StoreDir.pm
 lib/MetaStore/Users.pm
 lib/MetaStore/XMLStream.pm
@@ -29,4 +30,5 @@ script/metastore.sql
 script/metastore_rpc.pl
 t/01_MetaStore.t
 t/02_Links.t
+t/03_StoreDir.t
 META.yml

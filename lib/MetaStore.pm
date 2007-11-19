@@ -1,8 +1,9 @@
 package MetaStore;
+#$Id: MetaStore.pm 227 2007-11-19 19:14:56Z zag $
 
 =head1 NAME
 
-MetaStore - Set of classes for multiuser web applications.
+MetaStore - Set of classes for multiuser web applications. 
 
 =head1 SYNOPSIS
 
@@ -25,7 +26,7 @@ use strict;
 use warnings;
 
 our @ISA = qw(Objects::Collection);
-our $VERSION = '0.24';
+our $VERSION = '0.26';
 
 attributes qw/ props meta links _sub_ref/;
 

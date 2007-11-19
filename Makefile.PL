@@ -7,7 +7,7 @@ WriteMakefile
           'PREREQ_PM' => {
                            'Archive::Zip' => '1.16',
                            'Data::UUID' => '0.11',
-                           'HTML::WebDAO' => '0.04',
+                           'HTML::WebDAO' => '0.80',
                            'IO::Zlib' => '1.04',
                            'MIME::Base64' => '3.07',
                            'Objects::Collection' => '0.02',
