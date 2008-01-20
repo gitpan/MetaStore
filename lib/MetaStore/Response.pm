@@ -1,9 +1,10 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 204 2007-10-26 11:04:38Z zag $
+#$Id: Response.pm 239 2008-01-16 15:08:57Z zag $
 
 use Data::Dumper;
 use HTML::WebDAO::Response;
+use JSON;
 use base qw( HTML::WebDAO::Response );
 __PACKAGE__->attributes qw/  __json __html __xml /;
 use strict;
@@ -46,6 +47,19 @@ sub xml : lvalue {
 sub js : lvalue {
     my $self = shift;
     $self->{__jscript};
+}
+
+sub _print_dep_on_context {
+    my ( $self, $session ) = @_;
+    my $accept = $session->Cgi_env->{accept};
+    my $res ;
+    if ( exists $accept->{'application/javascript'} ) {
+        $res = $self->json;
+        $res = objToJson($res) unless  ref($res) eq 'CODE';
+    } else {
+        $res = $self->html
+    }
+    $self->print( ref($res) eq 'CODE' ? $res->() : $res );
 }
 
 sub _destroy {

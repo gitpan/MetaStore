@@ -1,6 +1,6 @@
 ---
 name: MetaStore
-version: 0.26
+version: 0.27
 author:
   - Zahatski Aliaksandr zag@cpan.org
 abstract: Set of classes for multiuser web applications.
@@ -19,7 +19,7 @@ requires:
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.26
+    version: 0.27
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
