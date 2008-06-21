@@ -6,9 +6,11 @@ WriteMakefile
           'VERSION_FROM' => 'lib/MetaStore.pm',
           'PREREQ_PM' => {
                            'Archive::Zip' => '1.16',
+                           'Config::Simple' => '0',
                            'Data::UUID' => '0.11',
                            'HTML::WebDAO' => '0.80',
                            'IO::Zlib' => '1.04',
+                           'JSON' => '2.07',
                            'MIME::Base64' => '3.07',
                            'Objects::Collection' => '0.02',
                            'Template' => '2.14',

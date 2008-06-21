@@ -1,6 +1,6 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 239 2008-01-16 15:08:57Z zag $
+#$Id: Response.pm 297 2008-06-21 10:08:35Z zag $
 
 use Data::Dumper;
 use HTML::WebDAO::Response;
@@ -55,7 +55,7 @@ sub _print_dep_on_context {
     my $res ;
     if ( exists $accept->{'application/javascript'} ) {
         $res = $self->json;
-        $res = objToJson($res) unless  ref($res) eq 'CODE';
+        $res = to_json($res) unless  ref($res) eq 'CODE';
     } else {
         $res = $self->html
     }

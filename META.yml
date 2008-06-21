@@ -1,6 +1,6 @@
 ---
 name: MetaStore
-version: 0.27
+version: 0.28
 author:
   - Zahatski Aliaksandr zag@cpan.org
 abstract: Set of classes for multiuser web applications.
@@ -9,9 +9,11 @@ resources:
   license: http://dev.perl.org/licenses/
 requires:
   Archive::Zip: 1.16
+  Config::Simple: 0
   Data::UUID: 0.11
   HTML::WebDAO: 0.80
   IO::Zlib: 1.04
+  JSON: 2.07
   MIME::Base64: 3.07
   Objects::Collection: 0.02
   Template: 2.14
@@ -19,7 +21,7 @@ requires:
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.27
+    version: 0.28
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01

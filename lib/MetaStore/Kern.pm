@@ -1,6 +1,6 @@
 package MetaStore::Kern;
 
-#$Id: Kern.pm 239 2008-01-16 15:08:57Z zag $
+#$Id: Kern.pm 297 2008-06-21 10:08:35Z zag $
 
 =head1 NAME
 
@@ -93,7 +93,7 @@ sub parse_template {
 
     #    my $template_obj = $self->__template_obj__ || new Template
     my $template_obj = new Template
-      INTERPOLATE => 1,
+      INTERPOLATE => 0,
       EVAL_PERL   => 0,
       ABSOLUTE    => 1,
       RELATIVE    => 1,

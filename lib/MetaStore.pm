@@ -1,5 +1,5 @@
 package MetaStore;
-#$Id: MetaStore.pm 239 2008-01-16 15:08:57Z zag $
+#$Id: MetaStore.pm 297 2008-06-21 10:08:35Z zag $
 
 =head1 NAME
 
@@ -26,7 +26,7 @@ use strict;
 use warnings;
 
 our @ISA = qw(Objects::Collection);
-our $VERSION = '0.27';
+our $VERSION = '0.28';
 
 attributes qw/ props meta links _sub_ref/;
 
