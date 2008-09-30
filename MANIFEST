@@ -31,4 +31,7 @@ script/metastore_rpc.pl
 t/01_MetaStore.t
 t/02_Links.t
 t/03_StoreDir.t
+t/04.Config.t
+t/data/test1.ini
+t/data/test2.ini
 META.yml

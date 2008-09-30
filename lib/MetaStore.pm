@@ -1,5 +1,5 @@
 package MetaStore;
-#$Id: MetaStore.pm 297 2008-06-21 10:08:35Z zag $
+#$Id: MetaStore.pm 345 2008-09-30 12:46:11Z zag $
 
 =head1 NAME
 
@@ -26,7 +26,7 @@ use strict;
 use warnings;
 
 our @ISA = qw(Objects::Collection);
-our $VERSION = '0.28';
+our $VERSION = '0.29';
 
 attributes qw/ props meta links _sub_ref/;
 
@@ -166,7 +166,7 @@ Zahatski Aliaksandr, <zag@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005-2006 by Zahatski Aliaksandr
+Copyright (C) 2005-2008 by Zahatski Aliaksandr
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.8 or,
