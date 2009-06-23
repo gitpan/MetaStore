@@ -1,11 +1,11 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 297 2008-06-21 10:08:35Z zag $
+#$Id: Response.pm 505 2009-03-03 19:24:18Z zag $
 
 use Data::Dumper;
-use HTML::WebDAO::Response;
+use WebDAO::Response;
 use JSON;
-use base qw( HTML::WebDAO::Response );
+use base qw( WebDAO::Response );
 __PACKAGE__->attributes qw/  __json __html __xml /;
 use strict;
 
@@ -68,7 +68,7 @@ sub _destroy {
     $self->{__json} = undef;
     $self->{__html} = undef;
     $self->{__xml} = undef;
-    $self->auto( [] );
+#    $self->auto( [] );
 }
 1;
 __END__

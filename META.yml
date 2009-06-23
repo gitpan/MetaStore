@@ -1,26 +1,26 @@
 ---
 name: MetaStore
-version: 0.29
+version: 0.50
 author:
   - Zahatski Aliaksandr zag@cpan.org
 abstract: Set of classes for multiuser web applications.
 license: perl
 resources:
-  license: http://dev.perl.org/licenses/
+  license: ~
 requires:
   Archive::Zip: 1.16
+  Collection: 0.02
   Data::UUID: 0.11
-  HTML::WebDAO: 0.80
   IO::Zlib: 1.04
   JSON: 2.07
   MIME::Base64: 3.07
-  Objects::Collection: 0.02
   Template: 2.14
+  WebDAO: 1.00
   XML::Flow: 0.82
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.29
+    version: 0.50
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -58,12 +58,6 @@ provides:
   MetaStore::Links:
     file: lib/MetaStore/Links.pm
     version: 0.01
-  MetaStore::Mem:
-    file: lib/MetaStore/Mem.pm
-    version: 0.01
-  MetaStore::MemnotUnique:
-    file: lib/MetaStore/MemnotUnique.pm
-    version: 0.01
   MetaStore::Response:
     file: lib/MetaStore/Response.pm
   MetaStore::StoreDir:
@@ -71,9 +65,7 @@ provides:
   MetaStore::Users:
     file: lib/MetaStore/Users.pm
     version: 0.01
-  MetaStore::XMLStream:
-    file: lib/MetaStore/XMLStream.pm
-generated_by: Module::Build version 0.2808
+generated_by: Module::Build version 0.32
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.2.html
   version: 1.2
