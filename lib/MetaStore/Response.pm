@@ -1,6 +1,6 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 505 2009-03-03 19:24:18Z zag $
+#$Id: Response.pm 608 2009-09-14 17:30:24Z zag $
 
 use Data::Dumper;
 use WebDAO::Response;
@@ -32,6 +32,11 @@ Class for set response headers. Add functionality to return context.
 sub json : lvalue {
     my $self = shift;
     $self->{__json};
+}
+
+sub raw : lvalue {
+    my $self = shift;
+    $self->{__raw};
 }
 
 sub html : lvalue {
@@ -68,6 +73,7 @@ sub _destroy {
     $self->{__json} = undef;
     $self->{__html} = undef;
     $self->{__xml} = undef;
+    $self->{__raw}= undef; 
 #    $self->auto( [] );
 }
 1;
