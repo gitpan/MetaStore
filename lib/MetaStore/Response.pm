@@ -1,6 +1,6 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 608 2009-09-14 17:30:24Z zag $
+#$Id: Response.pm 847 2010-10-17 18:07:39Z zag $
 
 use Data::Dumper;
 use WebDAO::Response;
@@ -64,7 +64,8 @@ sub _print_dep_on_context {
     } else {
         $res = $self->html
     }
-    $self->print( ref($res) eq 'CODE' ? $res->() : $res );
+    #print if defined result
+    $self->print( ref($res) eq 'CODE' ? $res->() : $res ) if defined $res;
 }
 
 sub _destroy {
