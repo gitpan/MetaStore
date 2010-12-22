@@ -1,6 +1,6 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 847 2010-10-17 18:07:39Z zag $
+#$Id: Response.pm 927 2010-12-22 14:53:53Z zag $
 
 use Data::Dumper;
 use WebDAO::Response;
@@ -33,6 +33,7 @@ sub json : lvalue {
     my $self = shift;
     $self->{__json};
 }
+
 
 sub raw : lvalue {
     my $self = shift;

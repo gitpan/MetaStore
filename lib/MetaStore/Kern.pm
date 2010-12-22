@@ -1,6 +1,6 @@
 package MetaStore::Kern;
 
-#$Id: Kern.pm 426 2009-02-01 09:54:34Z zag $
+#$Id: Kern.pm 927 2010-12-22 14:53:53Z zag $
 
 =head1 NAME
 
@@ -82,6 +82,17 @@ sub _createObj {
         return unless $auth->is_access($name_mod);
     }
     return $self->SUPER::_createObj(@_);
+}
+
+=head2 execute
+
+Use  execute2 api
+
+=cut
+
+sub execute {
+    my $self = shift;
+    return $self->execute2(@_);
 }
 
 sub parse_template {
