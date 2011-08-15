@@ -1,6 +1,6 @@
 package MetaStore::Kern;
 
-#$Id: Kern.pm 927 2010-12-22 14:53:53Z zag $
+#$Id: Kern.pm 948 2011-04-17 16:12:18Z zag $
 
 =head1 NAME
 
@@ -38,7 +38,7 @@ Initialize object
 sub init {
     my $self = shift;
     my (%opt) = @_;
-    $self->RegEvent( $self, "_sess_ended", sub { $self->commit } );
+    $self->__register_event__( $self, "_sess_ended", sub { $self->commit } );
     return $self->SUPER::init(@_);
 }
 

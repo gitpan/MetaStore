@@ -4,7 +4,7 @@ author:
   - 'Zahatski Aliaksandr zag@cpan.org'
 configure_requires:
   Module::Build: 0.36
-generated_by: 'Module::Build version 0.3607'
+generated_by: 'Module::Build version 0.3624'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,7 +13,7 @@ name: MetaStore
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.53
+    version: 0.55
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -60,7 +60,7 @@ provides:
     version: 0.01
 requires:
   Archive::Zip: 1.16
-  Collection: 0.45
+  Collection: 0.49
   Data::UUID: 0.11
   IO::Zlib: 1.04
   JSON: 2.07
@@ -70,4 +70,4 @@ requires:
   XML::Flow: 0.86
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.53
+version: 0.55
