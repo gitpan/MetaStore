@@ -13,7 +13,7 @@ name: MetaStore
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.55
+    version: 0.56
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -70,4 +70,4 @@ requires:
   XML::Flow: 0.86
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.55
+version: 0.56
