@@ -1,6 +1,6 @@
 package MetaStore::Kern;
 
-#$Id: Kern.pm 948 2011-04-17 16:12:18Z zag $
+#$Id$
 
 =head1 NAME
 
@@ -27,7 +27,7 @@ use Carp;
 use strict;
 use warnings;
 use base qw(WebDAO::Engine);
-__PACKAGE__->attributes qw/_conf __template_obj__/;
+__PACKAGE__->attributes (qw/_conf __template_obj__/);
 
 =head2 init
 

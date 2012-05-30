@@ -2,9 +2,11 @@
 abstract: 'Set of classes for multiuser web applications.'
 author:
   - 'Zahatski Aliaksandr zag@cpan.org'
+build_requires: {}
 configure_requires:
-  Module::Build: 0.36
-generated_by: 'Module::Build version 0.3624'
+  Module::Build: 0.38
+dynamic_config: 1
+generated_by: 'Module::Build version 0.38, CPAN::Meta::Converter version 2.120351'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
@@ -13,7 +15,7 @@ name: MetaStore
 provides:
   MetaStore:
     file: lib/MetaStore.pm
-    version: 0.56
+    version: 0.57
   MetaStore::Auth:
     file: lib/MetaStore/Auth.pm
     version: 0.01
@@ -25,13 +27,16 @@ provides:
     version: 0.01
   MetaStore::Auth::UserGuest:
     file: lib/MetaStore/Auth/UserGuest.pm
+    version: 0
   MetaStore::Base:
     file: lib/MetaStore/Base.pm
     version: 0.01
   MetaStore::Cmetalinks:
     file: lib/MetaStore/Cmetalinks.pm
+    version: 0
   MetaStore::Cmetatags:
     file: lib/MetaStore/Cmetatags.pm
+    version: 0
   MetaStore::Component:
     file: lib/MetaStore/Component.pm
     version: 0.01
@@ -43,18 +48,22 @@ provides:
     version: 0.01
   MetaStore::IsAuthed:
     file: lib/MetaStore/IsAuthed.pm
+    version: 0
   MetaStore::Item:
     file: lib/MetaStore/Item.pm
     version: 0.01
   MetaStore::Kern:
     file: lib/MetaStore/Kern.pm
+    version: 0
   MetaStore::Links:
     file: lib/MetaStore/Links.pm
     version: 0.01
   MetaStore::Response:
     file: lib/MetaStore/Response.pm
+    version: 0
   MetaStore::StoreDir:
     file: lib/MetaStore/StoreDir.pm
+    version: 0
   MetaStore::Users:
     file: lib/MetaStore/Users.pm
     version: 0.01
@@ -70,4 +79,4 @@ requires:
   XML::Flow: 0.86
 resources:
   license: http://dev.perl.org/licenses/
-version: 0.56
+version: 0.57

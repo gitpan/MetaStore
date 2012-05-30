@@ -28,3 +28,4 @@ t/04.Config.t
 t/data/test1.ini
 t/data/test2.ini
 META.yml
+META.json

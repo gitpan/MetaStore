@@ -1,12 +1,12 @@
 package MetaStore::Response;
 
-#$Id: Response.pm 927 2010-12-22 14:53:53Z zag $
+#$Id$
 
 use Data::Dumper;
 use WebDAO::Response;
 use JSON;
 use base qw( WebDAO::Response );
-__PACKAGE__->attributes qw/  __json __html __xml /;
+__PACKAGE__->attributes (qw/  __json __html __xml /);
 use strict;
 
 =head1 NAME
@@ -57,7 +57,7 @@ sub js : lvalue {
 
 sub _print_dep_on_context {
     my ( $self, $session ) = @_;
-    my $accept = $session->Cgi_env->{accept};
+    my $accept = $self->get_request->accept;
     my $res ;
     if ( exists $accept->{'application/javascript'} ) {
         $res = $self->json;
